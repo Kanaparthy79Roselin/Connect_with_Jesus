@@ -1,0 +1,51 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the journal entry"
+    },
+    "content": {
+      "type": "string",
+      "description": "The full body text of the journal entry"
+    },
+    "entry_type": {
+      "type": "string",
+      "enum": [
+        "reflection",
+        "prayer",
+        "gratitude",
+        "testimony"
+      ],
+      "default": "reflection",
+      "description": "The category of the journal entry"
+    },
+    "entry_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date this entry is for"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "peaceful",
+        "joyful",
+        "struggling",
+        "grateful",
+        "hopeful"
+      ],
+      "description": "The user's spiritual mood at the time of writing"
+    },
+    "linked_verse": {
+      "type": "string",
+      "description": "A scripture reference the entry is inspired by"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "entry_date",
+    "entry_type"
+  ]
+}

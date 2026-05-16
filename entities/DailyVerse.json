@@ -1,0 +1,57 @@
+{
+  "name": "DailyVerse",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date for this daily verse"
+    },
+    "book": {
+      "type": "string",
+      "description": "Book name"
+    },
+    "chapter": {
+      "type": "integer",
+      "description": "Chapter number"
+    },
+    "verse": {
+      "type": "integer",
+      "description": "Verse number"
+    },
+    "text": {
+      "type": "string",
+      "description": "The verse text"
+    },
+    "reference": {
+      "type": "string",
+      "description": "Full reference e.g. John 3:16 (NIV)"
+    },
+    "version": {
+      "type": "string",
+      "enum": [
+        "KJV",
+        "NKJV",
+        "NIV",
+        "ESV"
+      ],
+      "description": "Bible version used"
+    },
+    "book_index": {
+      "type": "integer",
+      "description": "Index 0-65 representing which of the 66 books this verse is from, used for rotation tracking"
+    },
+    "reflection": {
+      "type": "string",
+      "description": "A short reflection or prayer for the day"
+    }
+  },
+  "required": [
+    "date",
+    "book",
+    "chapter",
+    "verse",
+    "text",
+    "reference"
+  ]
+}

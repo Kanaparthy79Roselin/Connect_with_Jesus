@@ -1,0 +1,47 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "prayer_request",
+        "testimony"
+      ],
+      "description": "The type of post."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the post."
+    },
+    "content": {
+      "type": "string",
+      "description": "The main body of the post."
+    },
+    "author_name": {
+      "type": "string",
+      "description": "The name of the user who created the post."
+    },
+    "author_email": {
+      "type": "string",
+      "description": "The email of the user who created the post, for linking to their profile."
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, the author's name will be hidden."
+    },
+    "amen_count": {
+      "type": "integer",
+      "default": 0,
+      "description": "Number of 'Amens' or supports."
+    }
+  },
+  "required": [
+    "type",
+    "title",
+    "content",
+    "author_name",
+    "author_email"
+  ]
+}
